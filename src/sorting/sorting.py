@@ -27,8 +27,11 @@ def merge_sort(arr):
     if len(arr) > 1:
         # divide array
         mid_index = len(arr) // 2
+        left = merge_sort(arr[0:mid_index])
+        right = merge_sort(arr[mid_index:])
+
         # conquer the array
-        return merge(merge_sort(arr[0:mid_index]), merge_sort(arr[mid_index:]))
+        return merge(left, right)
 
     return arr
 

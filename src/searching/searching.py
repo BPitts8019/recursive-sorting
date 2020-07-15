@@ -11,8 +11,6 @@ def binary_search(arr, target, start, end):
     cur_index = ((end - start) // 2) + start
     if arr[cur_index] == target:
         rtn_index = cur_index
-    elif cur_index == end:
-        rtn_index - 1
     elif arr[cur_index] < target:
         rtn_index = binary_search(arr, target, cur_index+1, end)
     elif arr[cur_index] > target:
